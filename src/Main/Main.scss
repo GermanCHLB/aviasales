@@ -1,0 +1,19 @@
+.Main {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 232px 502px;
+  grid-template-rows: 50px 184px 1fr;
+  grid-template-areas:
+    'filter tabs'
+    'filter tickets'
+    '. tickets';
+
+  @media (max-width: 768px) {
+    grid-template-areas:
+      'tabs'
+      'filter'
+      'tickets';
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 252px 1fr;
+  }
+}

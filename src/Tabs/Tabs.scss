@@ -1,0 +1,69 @@
+.Tabs {
+  grid-area: tabs;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #4a4a4a;
+  font-weight: 600;
+  display: flex;
+  background: none;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .Tabs__label {
+    height: 50px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dfe5ec;
+    background-color: #fff;
+
+    .Tabs__input {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  .Tabs__label:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+
+    @media (max-width: 768px) {
+      border-bottom-left-radius: 0;
+      border-right: 1px solid #dfe5ec;
+      border-bottom: none;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+
+  .Tabs__label:last-child {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: none;
+
+    @media (max-width: 768px) {
+      border-top: none;
+      border-left: 1px solid #dfe5ec;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 5px;
+    }
+  }
+
+  .active-tab {
+    border: none;
+    background-color: #2196f3;
+    color: #fff;
+
+    @media (max-width: 768px) {
+      border: none;
+    }
+  }
+}
