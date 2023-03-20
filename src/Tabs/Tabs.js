@@ -1,7 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Tabs.scss'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { changeTabAction } from '../reducer'
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState('Самый дешёвый')
+  const dispatch = useDispatch()
+  const activeTab = useSelector((state) => state.activeTab)
+
+  const setActiveTab = (value) => {
+    dispatch(changeTabAction(value))
+  }
 
   let cn1 = 'Tabs__label'
   let cn2 = 'Tabs__label'
