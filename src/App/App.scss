@@ -6,9 +6,13 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #f3f7fa;
+}
+
 .App {
   padding: 0 100px 50px;
-  background-color: #f3f7fa;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   display: flex;

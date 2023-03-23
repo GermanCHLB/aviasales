@@ -6,7 +6,6 @@ import { changeTabAction } from '../reducer'
 const Tabs = () => {
   const dispatch = useDispatch()
   const activeTab = useSelector((state) => state.activeTab)
-
   const setActiveTab = (value) => {
     dispatch(changeTabAction(value))
   }
